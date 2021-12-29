@@ -75,3 +75,8 @@ img {
     font-weight: bold;
     border: 2px solid red;
 }
+
+#bet:disabled {
+    background-color: rgba(0, 128, 0, .7);
+    cursor: auto;
+}
