@@ -71,7 +71,7 @@ explore.addEventListener("click", function () {
       animation();
       image.src = "/images/allez.jpeg";
       message.innerHTML =
-        "<span class='result'>Crash at the Tour de France</span> <br> Lose 30 points.";
+        "<span class='result'>ALLEZ. Crash at the Tour de France</span> <br> Lose 30 points.";
       score -= 30;
       currentScore.innerHTML = score;
       bleepSound();
