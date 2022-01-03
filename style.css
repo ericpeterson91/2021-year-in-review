@@ -10,6 +10,14 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h4 {
     text-align: center;
     color: var(--main-text-color);
@@ -93,7 +101,7 @@ img {
     border-radius: 5px;
     font-size: 1.1rem;
     padding: 10px 20px;
-    margin-left: 60px;
+    margin-left: 70px;
     cursor: pointer;
     font-weight: bold;
     border: .5px solid red;
@@ -108,16 +116,41 @@ img {
     font-size: 1.05rem;
 }
 
-@media only screen and (min-width: 700px) {
+
+@media only screen and (min-width: 1165px) {
+    img {
+        width: 320px;
+        height: 260px;
+    }
+    
+    .message-container {
+        width: 40%;
+        margin: 40px auto;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1164px) {
    img {
        width: 320px;
-       height: 320px;
+       height: 260px;
    }
+   .message-container {
+    width: 100%;
+    margin: 40px auto;
+    border-radius: 10px;
+}
 }
 
 @media only screen and (max-width: 699px) {
     img {
-        width: 200px;
-        height: 200px;
+        width: 240px;
+        height: 180px;
+    }
+    .message-container {
+        width: 100%;
+        margin: 40px;
+        height: 150px;
+        padding: 18px;
     }
 }
