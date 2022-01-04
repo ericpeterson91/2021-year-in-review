@@ -6,6 +6,8 @@ https://imgur.com/iD0v97y
 
 https://imgur.com/Ji53giI
 
+update these screenshots once I am done styling the game
+
 # Technologies used
     - HTML, CSS, and JavaScript.
 

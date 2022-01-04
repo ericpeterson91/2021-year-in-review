@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(254, 254, 254);
     color: rgb(51, 51, 51);
     font-family: 'Poppins', sans-serif;
 }
@@ -24,7 +24,7 @@ h4 {
 }
 
 .message-container {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(240, 240, 240);
     height: 120px;
     display: flex;
     justify-content: space-around;
@@ -36,7 +36,7 @@ h4 {
 }
 
 #message {
-    margin: 0 40px;
+    font-size: 20px;
 }
 
 .score {
@@ -119,12 +119,12 @@ img {
 
 @media only screen and (min-width: 1165px) {
     img {
-        width: 320px;
-        height: 260px;
+        width: 500px;
+        height: 380px;
     }
     
     .message-container {
-        width: 40%;
+        width: 45%;
         margin: 40px auto;
         border-radius: 10px;
     }
@@ -132,8 +132,8 @@ img {
 
 @media only screen and (min-width: 700px) and (max-width: 1164px) {
    img {
-       width: 320px;
-       height: 260px;
+       width: 400px;
+       height: 320px;
    }
    .message-container {
     width: 100%;
