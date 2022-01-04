@@ -1,5 +1,3 @@
-// const bankAccountDisplay = document.querySelector("#bank");
-
 const explore = document.querySelector("button");
 
 let image = document.getElementById("image");
@@ -208,3 +206,9 @@ function checkForWin() {
 resetButton.addEventListener("click", function () {
   window.location.reload();
 });
+
+//change this to actually refresh the game in a JavaScript way.
+
+
+
+// add some styling

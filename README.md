@@ -28,5 +28,4 @@ https://imgur.com/Ji53giI
     - At any point during the game, you may click the Reset button to start the game over.      
 
 # Next Steps
-
     - Perhaps I can add more events, or update the game next year so it's a 2022 Year In Review.
