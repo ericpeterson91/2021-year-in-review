@@ -2,11 +2,10 @@
 
 # Screenshots 
 
-https://imgur.com/iD0v97y
+https://imgur.com/a/6XRIGIK
 
-https://imgur.com/Ji53giI
+https://imgur.com/a/X7dyGHM
 
-update these screenshots once I am done styling the game
 
 # Technologies used
     - HTML, CSS, and JavaScript.
