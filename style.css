@@ -291,7 +291,7 @@ img {
     }
     .bottom {
         position: absolute;
-        bottom: 5vh;
+        bottom: 0;
     }
 }
 
