@@ -15,24 +15,31 @@ body {
 .wrapper {
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 section {
     background-color: var(--main-text-color);
-    height: 10vh;
+    height: 5vh;
     width: 100%;
 }
 
-h4 {
-    text-align: center;
-    color: var(--main-text-color);
+.top {
+    position: absolute;
+    top: 0;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
 }
 
 #message {
-    font-size: 26px;
+    font-size: 20px;
 }
+
 .message-container {
     background-color: rgb(240, 240, 240);
     height: 120px;
@@ -58,13 +65,6 @@ h4 {
     margin-left: 5px;
 }
 
-.btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
 .container-img {
     margin-top: 30px;
     display: flex;
@@ -81,7 +81,14 @@ img {
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
-    margin-top: 15px;
+    margin-top: 10px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .result {
@@ -97,9 +104,11 @@ img {
     font-size: 1.1rem;
     cursor: pointer;
     background-color: rgb(0, 128, 0);
+    margin-right: 40px;
     color: white;
     font-weight: bold;
-    border: .5px solid green;
+    border: .5px solid rgb(0, 128, 0);
+    text-align: center;
 }
 
 #reset {
@@ -108,14 +117,15 @@ img {
     border-radius: 5px;
     font-size: 1.1rem; 
     padding: 10px 20px;
-    margin-left: 80px;
+    margin-left: 40px;
     cursor: pointer;
     font-weight: bold;
-    border: .5px solid red;
+    border: .5px solid rgb(255, 0, 0);
+    text-align: center;
 }
 
 #explore:disabled {
-    background-color: rgba(0, 128, 0, .7);
+    background-color: rgba(0, 128, 0, .6);
     cursor: auto;
 }
 
@@ -123,29 +133,24 @@ img {
     font-size: 1.05rem;
 }
 
-.ending-message {
-    font-size: 1.4rem;
-}
-
 @media only screen and (min-width: 1201px) {
     
     #explore, #reset {
-        font-size: 24px;
-        height: 65px;
-        width: 150px;
-        margin: 0 70px;
+        font-size: 1rem;
+        height: 50px;
+        width: 105px;
     }
 
     #explore:active, #reset:active {
-        font-size: 22px;
+        font-size: .95rem;
     }
 
     #score {
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .score {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .ending-message {
@@ -153,127 +158,140 @@ img {
     }
 
     img {
-        width: 650px;
-        height: 450px;
+        width: 400px;
+        height: 250px;
     }
     
     .message-container {
-        width: 60%;
+        width: 50%;
         margin: 40px auto;
         border-radius: 10px;
-        height: 170px;
+        height: 140px;
         padding: 0 30px;
     }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
     #explore, #reset {
-        font-size: 24px;
-        height: 60px;
-        width: 140px;
-        margin: 0 70px;
+        font-size: 1rem;
+        height: 50px;
+        width: 105px;
     }
 
     #explore:active, #reset:active {
-        font-size: 22px;
-    }
-
-    #score {
-        font-size: 65px;
-    }
-
-    .score {
-        font-size: 40px;
-    }
-
-    .ending-message {
-        font-size: 32px;
-    }
-
-    #message {
-        font-size: 24px;
-    }
-    img {
-       width: 550px;
-       height: 420px;
-   }
-   .message-container {
-    width: 85%;
-    margin: 40px auto;
-    height: 170px;
-    border-radius: 10px;
-}
-}
-
-@media only screen and (min-width: 500px) and (max-width: 699px) {
-    
-    #explore, #reset {
-        font-size: 20px;
-        height: 55px;
-        width: 130px;
-        margin: 0 55px;
-    }
-
-    #explore:active, #reset:active {
-        font-size: 18px;
+        font-size: .95rem;
     }
 
     #score {
         font-size: 60px;
     }
 
+    .score {
+        font-size: 40px;
+    }
+
     .ending-message {
-        font-size: 26px;
+        font-size: 36px;
+    }
+
+    img {
+        width: 400px;
+        height: 250px;
+    }
+    
+    .message-container {
+        width: 80%;
+        margin: 40px auto;
+        border-radius: 10px;
+        height: 140px;
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+    
+    #explore, #reset {
+        font-size: 1rem;
+        height: 50px;
+        width: 105px;
+    }
+
+    #explore:active, #reset:active {
+        font-size: .95rem;
+    }
+
+    #score {
+        font-size: 60px;
     }
 
     .score {
         font-size: 40px;
     }
 
+    .ending-message {
+        font-size: 26px;
+    }
+
     img {
-        width: 480px;
-        height: 350px;
+        width: 350px;
+        height: 220px;
     }
     .message-container {
         width: 100%;
         margin: 50px;
-        height: 180px;
+        height: 140px;
         padding: 0px 18px;
     }
     #message {
-        font-size: 26px;
+        font-size: 20px;
     }
 }
 
 @media only screen and (max-width: 499px) {
     
-
-    /* #explore, #reset {
-        font-size: 18px;
-        height: 40px;
-        width: 100px;
-        margin: 0 40px;
+    #explore, #reset {
+        font-size: 1rem;
+        height: 50px;
+        width: 105px;
     }
 
     #explore:active, #reset:active {
-        font-size: 18px;
-    } */
+        font-size: .95rem;
+    }
+
+    #score {
+        font-size: 60px;
+    }
+    .score {
+        font-size: 40px;
+    }
     #message {
         font-size: 16px;
         padding: 0 18px;
     }
     img {
-        width: 280px;
-        height: 205px;
+        width: 260px;
+        height: 190px;
     }
     .message-container {
         width: 100%;
-        margin: 50px;
+        margin-top: 40px;
         height: 160px;
         padding: 0px 18px;
     }
     .ending-message {
         font-size: 24px;
+    }
+
+    .btn-container, .score-container {
+        margin-top: 20px;
+    }
+    .container-img {
+        margin-top: 15px;
+    }
+    .bottom {
+        position: absolute;
+        bottom: 5vh;
     }
 }
 
