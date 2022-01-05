@@ -62,7 +62,7 @@ let timeout;
 explore.addEventListener("click", function () {
   explore.disabled = true;
   message.innerHTML = "";
-  timeout = setTimeout(animate, 3500)
+  timeout = setTimeout(animate, 3500);
   let result =
     possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
 
@@ -179,11 +179,13 @@ explore.addEventListener("click", function () {
 
 function checkForWin() {
   if (currentScore.innerHTML >= 100) {
-    message.innerHTML = "<div class='ending-message'>You win! You are a 2021 expert.</div>";
+    message.innerHTML =
+      "<div class='ending-message'>You win! You are a 2021 expert.</div>";
     applauseSound();
     explore.disabled = true;
   } else if (currentScore.innerHTML <= 0) {
-    message.innerHTML = "<div class='ending-message'>You lose! Better luck next time.</div>";
+    message.innerHTML =
+      "<div class='ending-message'>You lose! Better luck next time.</div>";
     playerLoseSound();
     explore.disabled = true;
   } else {
@@ -195,7 +197,8 @@ resetButton.addEventListener("click", function () {
   clearTimeout(timeout);
   explore.disabled = false;
   score = 50;
-  message.innerHTML = "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
-  image.src = "/images/2021.jpeg"
+  message.innerHTML =
+    "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
+  image.src = "/images/2021.jpeg";
   currentScore.innerHTML = score;
 });
