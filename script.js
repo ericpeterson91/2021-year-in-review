@@ -18,6 +18,7 @@ const possibleOutcomes = [
   "milk crate",
   "NFT",
   "olympics",
+  "shipping",
   "suez canal",
   "super bowl",
 ];
@@ -87,8 +88,8 @@ explore.addEventListener("click", function () {
     case "bernie":
       image.src = "/images/bernie-chillin.jpeg";
       message.innerHTML =
-        "<span class='result'>Bernie wears stylish mittens</span><br> Add 10 points";
-      score += 10;
+        "<span class='result'>Bernie wears stylish mittens</span><br> Add 20 points";
+      score += 20;
       currentScore.innerHTML = score;
       goodJobSound();
       break;
@@ -141,7 +142,7 @@ explore.addEventListener("click", function () {
     case "olympics":
       image.src = "/images/olympics.jpeg";
       message.innerHTML =
-        "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Very entertaining. Add 20 points.";
+        "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Add 20 points.";
       score += 20;
       currentScore.innerHTML = score;
       goodJobSound();
@@ -182,7 +183,7 @@ function checkForWin() {
     applauseSound();
     explore.disabled = true;
   } else if (currentScore.innerHTML <= 0) {
-    message.innerHTML = "<div class='ending-message'>You lose! Better Luck next time.</div>";
+    message.innerHTML = "<div class='ending-message'>You lose! Better luck next time.</div>";
     playerLoseSound();
     explore.disabled = true;
   } else {

@@ -108,7 +108,7 @@ img {
     border-radius: 5px;
     font-size: 1.1rem; 
     padding: 10px 20px;
-    margin-left: 70px;
+    margin-left: 80px;
     cursor: pointer;
     font-weight: bold;
     border: .5px solid red;
@@ -148,6 +148,10 @@ img {
         font-size: 50px;
     }
 
+    .ending-message {
+        font-size: 36px;
+    }
+
     img {
         width: 650px;
         height: 450px;
@@ -182,6 +186,10 @@ img {
         font-size: 40px;
     }
 
+    .ending-message {
+        font-size: 32px;
+    }
+
     #message {
         font-size: 24px;
     }
@@ -197,7 +205,7 @@ img {
 }
 }
 
-@media only screen and (max-width: 699px) {
+@media only screen and (min-width: 500px) and (max-width: 699px) {
     
     #explore, #reset {
         font-size: 20px;
@@ -212,6 +220,10 @@ img {
 
     #score {
         font-size: 60px;
+    }
+
+    .ending-message {
+        font-size: 26px;
     }
 
     .score {
@@ -229,12 +241,23 @@ img {
         padding: 0px 18px;
     }
     #message {
-        font-size: 21px;
+        font-size: 26px;
     }
 }
 
 @media only screen and (max-width: 499px) {
     
+
+    /* #explore, #reset {
+        font-size: 18px;
+        height: 40px;
+        width: 100px;
+        margin: 0 40px;
+    }
+
+    #explore:active, #reset:active {
+        font-size: 18px;
+    } */
     #message {
         font-size: 16px;
         padding: 0 18px;
@@ -248,6 +271,9 @@ img {
         margin: 50px;
         height: 160px;
         padding: 0px 18px;
+    }
+    .ending-message {
+        font-size: 24px;
     }
 }
 
