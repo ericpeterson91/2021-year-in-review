@@ -48,26 +48,15 @@ function playerLoseSound() {
   audio.play();
 }
 
-
-
 function animate() {
   image.src = "/images/2021.jpeg";
   explore.disabled = false;
   message.innerHTML =
-    "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win.";
+    "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
   checkForWin();
 }
 
 let timeout;
-
-// let animation = setTimeout(animate, 3500);
-
-
-
-// function animation() {
-//   explore.disabled = true;
-//   myTimeout();
-// }
 
 explore.addEventListener("click", function () {
   explore.disabled = true;
@@ -78,7 +67,6 @@ explore.addEventListener("click", function () {
 
   switch (result) {
     case "allez":
-      // setTimeout(animate, 3500);
       image.src = "/images/allez.jpeg";
       message.innerHTML =
         "<span class='result'>Allez. Crash at the Tour de France</span> <br> Lose 30 points.";
@@ -88,7 +76,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "ben and JLo":
-      // setTimeout(animate, 3500);
       image.src = "/images/ben-jlo.jpeg";
       message.innerHTML =
         "<span class='result'>Ben and JLo get back together</span> <br> Add 20 points";
@@ -98,7 +85,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "bernie":
-      // setTimeout(animate, 3500);
       image.src = "/images/bernie-chillin.jpeg";
       message.innerHTML =
         "<span class='result'>Bernie wears stylish mittens</span><br> Add 10 points";
@@ -108,7 +94,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "billionaires":
-      setTimeout(animate, 3500);
       image.src = "/images/billionaires.jpeg";
       message.innerHTML =
         "<span class='result'>Billionaires explore space</span><br> Add 20 points.";
@@ -118,7 +103,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "free britney":
-      // setTimeout(animate, 3500);
       image.src = "/images/free-britney.jpeg";
       message.innerHTML =
         "<span class='result'>#FreeBritney</span><br> Add 20 points";
@@ -128,7 +112,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "kimye":
-      // setTimeout(animate, 3500);
       image.src = "/images/kimye.jpeg";
       message.innerHTML =
         "<span class='result'>Kim and Kanye break up</span> <br> Lose 20 points.";
@@ -138,7 +121,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "milk crate":
-      // setTimeout(animate, 3500);
       image.src = "/images/milk-crate.jpeg";
       message.innerHTML =
         "<span class='result'>Milk Crate Challenge</span> <br> Questionnable way to get likes online. Lose 30 points.";
@@ -148,7 +130,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "NFT":
-      // setTimeout(animate, 3500);
       image.src = "/images/NFTs.jpeg";
       message.innerHTML =
         "<span class='result'>NFT market goes crazy</span><br> Are NFTs here to stay? Add 20 points.";
@@ -158,17 +139,15 @@ explore.addEventListener("click", function () {
       break;
 
     case "olympics":
-      // setTimeout(animate, 3500);
       image.src = "/images/olympics.jpeg";
       message.innerHTML =
-        "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Very funny stuff. Add 20 points.";
+        "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Very entertaining. Add 20 points.";
       score += 20;
       currentScore.innerHTML = score;
       goodJobSound();
       break;
 
     case "shipping":
-      // setTimeout(animate, 3500);
       image.src = "/images/shipping.jpeg";
       message.innerHTML =
         "<span class='result'>Supply Chain Issues</span> <br> Where is everything? Lose 30 points.";
@@ -178,7 +157,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "suez canal":
-      // setTimeout(animate, 3500);
       image.src = "/images/suez-canal.jpeg";
       message.innerHTML =
         "<span class='result'>This big ship got stuck</span> <br> What a mess. Lose 20 points.";
@@ -188,7 +166,6 @@ explore.addEventListener("click", function () {
       break;
 
     case "super bowl":
-      // setTimeout(animate, 3500);
       image.src = "/images/tbgronk.jpeg";
       message.innerHTML =
         "<span class='result'>Tom Brady wins Super Bowl #7</span> <br> Add 20 points.";
@@ -201,15 +178,11 @@ explore.addEventListener("click", function () {
 
 function checkForWin() {
   if (currentScore.innerHTML >= 100) {
-    message.style.fontSize = "34px"
-    message.innerHTML = "You win! You are a 2021 expert.";
-    // message.style.fontSize = "1.8rem";
+    message.innerHTML = "<div class='ending-message'>You win! You are a 2021 expert.</div>";
     applauseSound();
     explore.disabled = true;
   } else if (currentScore.innerHTML <= 0) {
-    message.style.fontSize = "34px"
-    message.innerHTML = "You lose! Better Luck next time";
-    // message.style.fontSize = "1.8rem";
+    message.innerHTML = "<div class='ending-message'>You lose! Better Luck next time.</div>";
     playerLoseSound();
     explore.disabled = true;
   } else {
@@ -221,14 +194,7 @@ resetButton.addEventListener("click", function () {
   clearTimeout(timeout);
   explore.disabled = false;
   score = 50;
-  message.style.fontSize = "20px"
-  message.innerHTML = "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win.";
+  message.innerHTML = "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
   image.src = "/images/2021.jpeg"
   currentScore.innerHTML = score;
 });
-
-//change this to actually refresh the game in a JavaScript way.
-
-
-
-// add some styling
