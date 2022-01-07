@@ -22,17 +22,16 @@ body {
 
 section {
     background-color: var(--main-text-color);
-    height: 5vh;
     width: 100%;
 }
 
 .top {
-    position: absolute;
+    height: 7vh;
     top: 0;
 }
 
 .bottom {
-    position: absolute;
+    height: 7vh;
     bottom: 0;
 }
 
@@ -292,6 +291,12 @@ img {
     .bottom {
         position: absolute;
         bottom: 0;
+        height: 5vh;
+        
+    }
+    .top {
+        position: absolute;
+        top: 0;
+        height: 5vh;
     }
 }
-
