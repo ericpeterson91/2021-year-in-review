@@ -1,6 +1,6 @@
 # 2021 Year In Review Game
 
-https://ericpeterson91.github.io/
+[https://ericpeterson91.github.io/](https://ericpeterson91.github.io/2021-year-in-review/)
 
 # Screenshots 
 
