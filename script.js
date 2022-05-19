@@ -50,7 +50,7 @@ function playerLoseSound() {
 }
 
 function animate() {
-  image.src = "/images/2021.jpeg";
+  image.src = "./images/2021.jpeg";
   explore.disabled = false;
   message.innerHTML =
     "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
@@ -199,6 +199,6 @@ resetButton.addEventListener("click", function () {
   score = 50;
   message.innerHTML =
     "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
-  image.src = "/images/2021.jpeg";
+  image.src = "./images/2021.jpeg";
   currentScore.innerHTML = score;
 });
