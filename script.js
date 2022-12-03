@@ -26,25 +26,25 @@ const possibleOutcomes = [
 let score = 50;
 
 function applauseSound() {
-  let audio = new Audio("/sounds/applause.wav");
+  let audio = new Audio("./sounds/applause.wav");
   audio.volume = 0.1;
   audio.play();
 }
 
 function bleepSound() {
-  let audio = new Audio("/sounds/bleep.wav");
+  let audio = new Audio("./sounds/bleep.wav");
   audio.volume = 0.1;
   audio.play();
 }
 
 function goodJobSound() {
-  let audio = new Audio("/sounds/good-job.wav");
+  let audio = new Audio("./sounds/good-job.wav");
   audio.volume = 0.1;
   audio.play();
 }
 
 function playerLoseSound() {
-  let audio = new Audio("/sounds/player-lose.wav");
+  let audio = new Audio("./sounds/player-lose.wav");
   audio.volume = 0.1;
   audio.play();
 }
