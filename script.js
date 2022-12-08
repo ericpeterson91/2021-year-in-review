@@ -1,29 +1,93 @@
 const explore = document.querySelector("button");
-
-let image = document.getElementById("image");
-
+let mainImage = document.getElementById("image");
 let currentScore = document.getElementById("score");
-
 let message = document.querySelector("#message");
-
 const resetButton = document.querySelector("#reset");
+let score = 50;
+let timeout;
 
 const possibleOutcomes = [
-  "allez",
-  "ben and JLo",
-  "bernie",
-  "billionaires",
-  "free britney",
-  "kimye",
-  "milk crate",
-  "NFT",
-  "olympics",
-  "shipping",
-  "suez canal",
-  "super bowl",
+  {
+    image: "./images/allez.jpeg",
+    prompt: "Allez. Crash at the Tour de France. <br> Lose 30 points.",
+    points: -30,
+    sound: bleepSound,
+  },
+  {
+    image: "./images/ben-jlo.jpeg",
+    prompt:
+      "<span class='result'>Ben and JLo get back together</span> <br> Add 20 points",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/bernie-chillin.jpeg",
+    prompt:
+    "<span class='result'>Bernie wears stylish mittens</span><br> Add 20 points",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/billionaires.jpeg",
+    prompt:
+    "<span class='result'>Billionaires explore space</span><br> Add 20 points.",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/free-britney.jpeg",
+    prompt:
+    "<span class='result'>#FreeBritney</span><br> Add 20 points",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/milk-crate.jpeg",
+    prompt:
+    "<span class='result'>Milk Crate Challenge</span><br> Questionnable way to get likes online. Lose 30 points",
+    points: -30,
+    sound: bleepSound,
+  },
+  {
+    image: "./images/NFTs.jpeg",
+    prompt:
+    "<span class='result'>NFT market goes crazy</span><br> Are NFTs here to stay? Add 20 points.",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/olympics.jpeg",
+    prompt:
+     "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Add 20 points.",
+    points: 20,
+    sound: goodJobSound,
+  },
+  {
+    image: "./images/shipping.jpeg",
+    prompt:
+     "<span class='result'>Supply Chain Issues</span> <br> Where is everything? Lose 30 points.",
+    points: -30,
+    sound: bleepSound,
+  },
+  {
+    image: "./images/suez-canal.jpeg",
+    prompt:
+    "<span class='result'>This big ship got stuck</span> <br> What a mess. Lose 20 points.",
+    points: -20,
+    sound: bleepSound,
+  },
+  {
+    image: "./images/tbgronk.jpeg",
+    prompt:
+     "<span class='result'>Tom Brady wins Super Bowl #7</span> <br> Add 20 points.",
+    points: 20,
+    sound: goodJobSound,
+  }
+
 ];
 
-let score = 50;
+
+//Functions to play sounds
 
 function applauseSound() {
   let audio = new Audio("./sounds/applause.wav");
@@ -50,131 +114,24 @@ function playerLoseSound() {
 }
 
 function animate() {
-  image.src = "./images/2021.jpeg";
+  mainImage.src = "./images/2021.jpeg";
   explore.disabled = false;
   message.innerHTML =
     "<span class='result'>2021 Year In Review</span><br> Click 'Explore' to navigate through 2021. <br> 100 points to win. 0 points is a loss.";
   checkForWin();
 }
 
-let timeout;
-
 explore.addEventListener("click", function () {
   explore.disabled = true;
   message.innerHTML = "";
   timeout = setTimeout(animate, 3500);
-  let result =
+  const {image, prompt, points, sound} =
     possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
-
-  switch (result) {
-    case "allez":
-      image.src = "./images/allez.jpeg";
-      message.innerHTML =
-        "<span class='result'>Allez. Crash at the Tour de France</span> <br> Lose 30 points.";
-      score -= 30;
-      currentScore.innerHTML = score;
-      bleepSound();
-      break;
-
-    case "ben and JLo":
-      image.src = "./images/ben-jlo.jpeg";
-      message.innerHTML =
-        "<span class='result'>Ben and JLo get back together</span> <br> Add 20 points";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "bernie":
-      image.src = "./images/bernie-chillin.jpeg";
-      message.innerHTML =
-        "<span class='result'>Bernie wears stylish mittens</span><br> Add 20 points";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "billionaires":
-      image.src = "./images/billionaires.jpeg";
-      message.innerHTML =
-        "<span class='result'>Billionaires explore space</span><br> Add 20 points.";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "free britney":
-      image.src = "./images/free-britney.jpeg";
-      message.innerHTML =
-        "<span class='result'>#FreeBritney</span><br> Add 20 points";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "kimye":
-      image.src = "./images/kimye.jpeg";
-      message.innerHTML =
-        "<span class='result'>Kim and Kanye break up</span> <br> Lose 20 points.";
-      score -= 20;
-      currentScore.innerHTML = score;
-      bleepSound();
-      break;
-
-    case "milk crate":
-      image.src = "./images/milk-crate.jpeg";
-      message.innerHTML =
-        "<span class='result'>Milk Crate Challenge</span> <br> Questionnable way to get likes online. Lose 30 points.";
-      score -= 30;
-      currentScore.innerHTML = score;
-      bleepSound();
-      break;
-
-    case "NFT":
-      image.src = "./images/NFTs.jpeg";
-      message.innerHTML =
-        "<span class='result'>NFT market goes crazy</span><br> Are NFTs here to stay? Add 20 points.";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "olympics":
-      image.src = "./images/olympics.jpeg";
-      message.innerHTML =
-        "<span class='result'>Kevin Hart and Snoop Dogg provide Olympic Coverage</span> <br> Add 20 points.";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-
-    case "shipping":
-      image.src = "./images/shipping.jpeg";
-      message.innerHTML =
-        "<span class='result'>Supply Chain Issues</span> <br> Where is everything? Lose 30 points.";
-      score -= 30;
-      currentScore.innerHTML = score;
-      bleepSound();
-      break;
-
-    case "suez canal":
-      image.src = "./images/suez-canal.jpeg";
-      message.innerHTML =
-        "<span class='result'>This big ship got stuck</span> <br> What a mess. Lose 20 points.";
-      score -= 20;
-      currentScore.innerHTML = score;
-      bleepSound();
-      break;
-
-    case "super bowl":
-      image.src = "./images/tbgronk.jpeg";
-      message.innerHTML =
-        "<span class='result'>Tom Brady wins Super Bowl #7</span> <br> Add 20 points.";
-      score += 20;
-      currentScore.innerHTML = score;
-      goodJobSound();
-      break;
-  }
+  mainImage.src = image;
+  message.innerHTML = prompt //Change this so there is not HTML
+  score = score + points
+  currentScore.innerHTML = score
+  sound()
 });
 
 function checkForWin() {
